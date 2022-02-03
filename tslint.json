@@ -1,0 +1,45 @@
+{
+    "extends": [
+      "tslint-react",
+      "tslint-config-airbnb",
+      "tslint-config-prettier"
+    ],
+    "linterOptions": {
+      "exclude": [
+        "bin",
+        "src/**/*.json",
+        "lib/*generated.js",
+        "src/**/coverage"
+      ]
+    },
+    "cliOptions": {
+      "exclude": [
+        "bin",
+        "**.json",
+        "**/test",
+        "lib/*generated.js",
+        "**/coverage"
+      ]
+    },
+    "rulesDirectory": [
+      "tslint-plugin-prettier"
+    ],
+    "rules": {
+      "prettier": true,
+      "interface-name": false,
+      "object-literal-sort-keys": false,
+      "no-console": false,
+      "prefer-template": false,
+      "object-shorthand-properties-first": false,
+      "member-access": false,
+      "no-angle-bracket-type-assertion": true,
+      "no-var-requires": false,
+      "variable-name": false,
+      "no-duplicate-imports": false,
+      "jsx-no-lambda": false,
+      "jsx-boolean-value": false,
+      "import-name": false,
+      "no-increment-decrement": false
+    }
+  }
+  

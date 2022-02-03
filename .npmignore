@@ -1,0 +1,9 @@
+node_modules/
+src/
+example/
+.git
+.gitignore
+tsconfig.json
+tslint.json
+yarn.lock
+.prettier.rc
