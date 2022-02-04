@@ -128,11 +128,11 @@ export class AppConfiguration implements NCApplicationConfiguration {
 
 # TO-DO
 
-[ ] Test Environment
-[ ] Lint Environment  
-[ ] PR github Action  
-[ ] Default FetchNetworking  
-[ ] NCNetwork.setBaseUrl
+- [x] Test Environment  
+- [ ] Lint Environment  
+- [ ] PR github Action  
+- [ ] Default FetchNetworking  
+- [ ] NCNetwork.setBaseUrl
 
 # Example Project
 
