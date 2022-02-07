@@ -131,7 +131,7 @@ export class AppConfiguration implements NCApplicationConfiguration {
 
 - [x] Test Environment  
 - [ ] Lint Environment  
-- [ ] PR github Action  
+- [x] PR github Action  
 - [ ] Default FetchNetworking  
 - [ ] NCNetwork.setBaseUrl
 
