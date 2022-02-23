@@ -1,6 +1,8 @@
-import { NCApplicationConfiguration, NCDefaultApplicationConfiguration } from "./NCApplicationConfiguration";
+import {
+  NCApplicationConfiguration,
+  NCDefaultApplicationConfiguration,
+} from "./NCApplicationConfiguration";
 import { ServiceLocator } from "./di/ServiceLocator";
-import { NCLog, NCLogLevel } from "./utils/NCLog";
 import { NCDatingClassName } from "./utils/date/NCDating";
 import { JSDateDating } from "./utils/date/JSDateDating";
 import {
@@ -8,7 +10,6 @@ import {
   NCStorageClassName,
 } from "./IO/persistant/NCStorage";
 import { MemoryStorage } from "./IO/persistant/MemoryStorage";
-
 export class NCApplicationContext {
   // Singleton
   private static _instance: NCApplicationContext | null = null;
@@ -28,13 +29,14 @@ export class NCApplicationContext {
     }
     return NCApplicationContext._instance!!;
   }
-
   ///
 
   private _modeDev = false;
   private _serviceLocator: ServiceLocator;
 
-  private constructor(configuration: NCApplicationConfiguration = new NCDefaultApplicationConfiguration()) {
+  private constructor(
+    configuration: NCApplicationConfiguration = new NCDefaultApplicationConfiguration()
+  ) {
     this._serviceLocator = new ServiceLocator();
 
     this.initDefaults();
