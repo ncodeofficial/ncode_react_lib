@@ -116,4 +116,10 @@ export class JSDateDating implements NCDating {
     throw new Error("duration not supported");
     return "";
   }
+
+  // 타임존 시간 출력
+  setTimeWithTimezone(timezone?: string, keepLocalTime?: boolean) {
+    Intl.DateTimeFormat("default", { timeZone: timezone });
+    return this;
+  }
 }

@@ -238,4 +238,9 @@ export class NCDate {
     const _date = date.toDate();
     return this.dating.diff(_date, unit, float);
   }
+
+  // 타임존 시간 출력
+  getStringWithTimezone(timezone: string, format: string): string {
+    return this.dating.getStringWithTimezone(timezone, format);
+  }
 }

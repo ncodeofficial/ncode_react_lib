@@ -9,7 +9,7 @@ export interface NCDating {
   fromDate(d: Date): NCDating; // Date 로부터 생성
   parse(date: string): NCDating; // 문자열로부터 설정
   addDayTo(day: number): NCDating;
-
+  getStringWithTimezone(timezone: string, format: string): string; // timezone 설정
   diff(date: Date, unit?: string, float?: boolean): number;
 
   /**
