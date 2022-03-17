@@ -34,7 +34,10 @@ export class AppConfiguration implements NCApplicationConfiguration {
   config(container: ServiceLocator): void {
     container.registFactory(NCDatingClassName, () => new DayjsDating());
     container.registFactory(NCStorageClassName, () => new SessionStorage());
-    container.registFactory(NCNetworkingClassName, () => new AxiosNetworking());
+    container.registFactory(
+      NCNetworkingClassName,
+      () => new AxiosNetworking(`${process.env.REACT_APP_BASE_URL}`)
+    );
 
     // set ViewModels
     this.configViewModels(container);

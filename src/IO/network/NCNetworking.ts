@@ -3,6 +3,9 @@ import { NCNetworkResponse } from "./NCNetworkResponse";
 export const NCNetworkingClassName = "NCNetworking";
 
 export interface NCNetworking {
+  baseUrl: string;
+  setNewBaseUrl(baseUrl: string): void;
+
   execute(
     method: NCNetworkMethod,
     url: string,

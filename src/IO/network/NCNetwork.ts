@@ -10,6 +10,12 @@ import { NCNetworkException } from "./NCNetworkException";
 export class NCNetwork {
   private network: NCNetworking = Inject(NCNetworkingClassName);
 
+  constructor(baseUrl?: string) {
+    if (baseUrl?.trim()) {
+      this.network.setNewBaseUrl(baseUrl);
+    }
+  }
+
   private execute(
     method: NCNetworkMethod,
     url: string,
