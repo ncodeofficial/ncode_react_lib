@@ -12,7 +12,7 @@ export class NCNetwork {
 
   constructor(baseUrl?: string) {
     if (baseUrl?.trim()) {
-      this.network.setNewBaseUrl(baseUrl);
+      this.network.setNewBaseUrl(baseUrl?.trim());
     }
   }
 
