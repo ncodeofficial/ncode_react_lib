@@ -59,7 +59,7 @@ export class NCNavigator implements NCNavigate {
   private static assertedInstance = (
     callbackFn: (instance: NCNavigate) => void
   ): void => {
-    const NEED_TO_NAVIGATE_ERROR_MSG = "Please register first.";
+    const NEED_TO_NAVIGATE_ERROR_MSG = "Please register navigate first. : https://github.com/ncodeofficial/ncode_react_lib/blob/main/NAVIGATE.md";
 
     if (!NCNavigator.instance) throw new Error(NEED_TO_NAVIGATE_ERROR_MSG);
     callbackFn(this.instance);

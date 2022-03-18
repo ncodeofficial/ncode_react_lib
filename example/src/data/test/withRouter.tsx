@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { NavigateFunction } from "react-router";
 import { NCNavigator } from "@ncodedcode/ncode_react_lib";
 
-const withRouter = (Component: any) => {
+const withRouter: <T>(
+  Component: React.ComponentType<T>
+) => (props: any) => JSX.Element = (Component: any) => {
   return (props: any) => {
     const navigate: NavigateFunction = useNavigate();
 
