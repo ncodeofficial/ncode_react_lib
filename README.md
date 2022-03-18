@@ -1,6 +1,7 @@
 # ncode_react_lib
 
-[![npm version](https://badge.fury.io/js/@ncodedcode%2Fncode_react_lib.svg)](https://badge.fury.io/js/@ncodedcode%2Fncode_react_lib)
+[![npm](https://img.shields.io/npm/v/@ncodedcode/ncode_react_lib?style=flat-square)](https://www.npmjs.com/package/@ncodedcode/ncode_react_lib)
+![NPM](https://img.shields.io/npm/l/@ncodedcode/ncode_react_lib?style=flat-square)
 
 ## Install
 
@@ -128,8 +129,11 @@ export class AppConfiguration implements NCApplicationConfiguration {
 
 # TO-DO
 
-[ ] Default FetchNetworking  
-[ ] NCNetwork.setBaseUrl
+- [x] Test Environment  
+- [ ] Lint Environment  
+- [x] PR github Action  
+- [ ] Default FetchNetworking  
+- [ ] NCNetwork.setBaseUrl
 
 # Example Project
 

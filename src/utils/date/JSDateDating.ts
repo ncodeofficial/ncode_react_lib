@@ -79,6 +79,7 @@ export class JSDateDating implements NCDating {
   format(f: string) {
     return f
       .replace("yyyy", `${this.year()}`)
+      .replace("YYYY", `${this.year()}`)
       .replace("MM", `${this.month()}`)
       .replace("DD", `${this.day()}`)
       .replace("HH", `${this.hour()}`)
