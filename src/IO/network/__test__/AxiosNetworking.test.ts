@@ -21,10 +21,10 @@ describe("AxiosNetworking tests", () => {
       );
     });
 
-    test('api should request with "baseUrl(http://worldtimeapi.org/api)"', async () => {
+    test('api should request with "baseUrl(http://worldtimeapi.org/api)"', () => {
       expect(res?.data.config.url.startsWith(baseUrl)).toBe(true);
     });
-    test('url should includes "additionalUrl(/timezone/Etc/UTC)"', async () => {
+    test('url should includes "additionalUrl(/timezone/Etc/UTC)"', () => {
       expect(res?.data.config.url.includes(additionalUrl)).toBe(true);
     });
   });
@@ -47,7 +47,7 @@ describe("AxiosNetworking tests", () => {
     test("should not request with baseUrl(http://worldtimeapi.org/api)", () => {
       expect(res?.data.config.url.startsWith(baseUrl)).toBe(false);
     });
-    test('should request with "another url(http://naver.com)"', async () => {
+    test('should request with "another url(http://naver.com)"', () => {
       expect(res?.data.config.url).toBe(`${anotherUrl}`);
     });
   });
