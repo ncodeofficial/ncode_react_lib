@@ -16,10 +16,6 @@ export class AxiosNetworking implements NCNetworking {
     return this._baseUrl;
   }
 
-  setNewBaseUrl(newBaseUrl: string): void {
-    this._baseUrl = newBaseUrl;
-  }
-
   addCommonHeader(key: string, value: string): void {
     this.commonHeader[key] = value;
   }
@@ -44,7 +40,7 @@ export class AxiosNetworking implements NCNetworking {
 
     const config: AxiosRequestConfig = {
       method: method as Method,
-      url: `${this._baseUrl}${url}`,
+      url: url.startsWith("http") ? url : `${this._baseUrl}${url}`,
       headers,
       params: queryParam,
       data: requestBody,
