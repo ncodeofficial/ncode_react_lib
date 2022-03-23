@@ -6,14 +6,18 @@ import { NCLog } from "@ncodedcode/ncode_react_lib";
 export class AxiosNetworking implements NCNetworking {
   private commonHeader: { [key: string]: string } = {};
 
-  private _baseUrl: string;
+  private _baseUrl: string = "";
 
   constructor(baseUrl: string) {
-    this._baseUrl = baseUrl;
+    this.setBaseUrl(baseUrl);
   }
 
   get baseUrl(): string {
     return this._baseUrl;
+  }
+
+  setBaseUrl(baseUrl: string): void {
+    this._baseUrl = baseUrl;
   }
 
   addCommonHeader(key: string, value: string): void {

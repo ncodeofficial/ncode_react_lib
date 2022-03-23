@@ -36,7 +36,7 @@ export class AppConfiguration implements NCApplicationConfiguration {
     container.registFactory(NCStorageClassName, () => new SessionStorage());
     container.registFactory(
       NCNetworkingClassName,
-      () => new AxiosNetworking(`${process.env.REACT_APP_BASE_URL}`)
+      () => new AxiosNetworking(`${process.env.REACT_APP_WORLD_TIME_API_URL}`)
     );
 
     // set ViewModels

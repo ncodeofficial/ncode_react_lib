@@ -5,6 +5,8 @@ export const NCNetworkingClassName = "NCNetworking";
 export interface NCNetworking {
   baseUrl: string;
 
+  setBaseUrl(baseUrl: string): void;
+
   execute(
     method: NCNetworkMethod,
     url: string,
