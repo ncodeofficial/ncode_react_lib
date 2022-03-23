@@ -1,5 +1,6 @@
 import { NCDating, NCDatingClassName } from "./NCDating";
 import { Inject } from "../../di/Inject";
+import {ENCTimezone} from "./enum/ENCTimezone";
 
 export enum NCDateUnit {
   millisecond = "millisecond",
@@ -237,5 +238,10 @@ export class NCDate {
   diff(date: NCDate, unit?: NCDateUnit, float = false): number {
     const _date = date.toDate();
     return this.dating.diff(_date, unit, float);
+  }
+
+  // 타임존 시간 출력
+  getStringWithTimezone(timezone: ENCTimezone, format: string): string {
+    return this.dating.getStringWithTimezone(timezone, format);
   }
 }

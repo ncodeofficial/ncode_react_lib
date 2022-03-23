@@ -1,4 +1,5 @@
 import { NCDating } from "./NCDating";
+import {ENCTimezone} from "./enum/ENCTimezone";
 
 export class JSDateDating implements NCDating {
   private _date = new Date();
@@ -116,5 +117,10 @@ export class JSDateDating implements NCDating {
   ): string {
     throw new Error("duration not supported");
     return "";
+  }
+
+  // 타임존 시간 출력
+  getStringWithTimezone(timezone: ENCTimezone, format: string) : string {
+    return this.fromDate(new Date(this._date.toLocaleString("en-US", {timeZone: timezone}))).format(format);
   }
 }
