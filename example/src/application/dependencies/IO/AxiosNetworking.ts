@@ -6,7 +6,19 @@ import { NCLog } from "@ncodedcode/ncode_react_lib";
 export class AxiosNetworking implements NCNetworking {
   private commonHeader: { [key: string]: string } = {};
 
-  constructor() {}
+  private _baseUrl: string = "";
+
+  constructor(baseUrl: string) {
+    this.setBaseUrl(baseUrl);
+  }
+
+  get baseUrl(): string {
+    return this._baseUrl;
+  }
+
+  setBaseUrl(baseUrl: string): void {
+    this._baseUrl = baseUrl;
+  }
 
   addCommonHeader(key: string, value: string): void {
     this.commonHeader[key] = value;
@@ -32,7 +44,7 @@ export class AxiosNetworking implements NCNetworking {
 
     const config: AxiosRequestConfig = {
       method: method as Method,
-      url,
+      url: url.startsWith("http") ? url : `${this._baseUrl}${url}`,
       headers,
       params: queryParam,
       data: requestBody,
