@@ -41,6 +41,6 @@ export class WatchViewModelImpl implements WatchViewModel {
   }
 
   goToCounterPage(): void {
-    NCNavigator.moveTo("/counter");
+    NCNavigator.goBack();
   }
 }

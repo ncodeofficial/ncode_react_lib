@@ -5,6 +5,7 @@ import { Counter } from "./pages/counter/Counter";
 import { Watch } from "./pages/watch/Watch";
 import { observer } from "mobx-react";
 import { Center, HStack, VStack } from "@ncodedcode/ncode_react_lib";
+import withRouter from "../application/hoc/withRouter";
 
 class App extends React.Component {
   render() {
@@ -32,4 +33,4 @@ class App extends React.Component {
   }
 }
 
-export default observer(App);
+export default observer(withRouter(App));

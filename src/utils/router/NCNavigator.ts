@@ -58,11 +58,11 @@ export class NCNavigator implements NCNavigate {
    */
   private static assertedInstance = (
     callbackFn: (instance: NCNavigate) => void
-  ): void => {
+  ): void | string => {
     const NEED_TO_NAVIGATE_ERROR_MSG = "Please register navigate first. : https://github.com/ncodeofficial/ncode_react_lib/blob/main/NAVIGATE.md";
 
     if (!NCNavigator.instance) throw new Error(NEED_TO_NAVIGATE_ERROR_MSG);
-    callbackFn(this.instance);
+    return callbackFn(this.instance);
   };
 
   static goBack() {
@@ -88,7 +88,7 @@ export class NCNavigator implements NCNavigate {
   }
 
   static currentPath() {
-    NCNavigator.assertedInstance((i) => i._currentPath());
+    return NCNavigator.assertedInstance((i) => i._currentPath());
   }
 
   static replace(path: string) {
