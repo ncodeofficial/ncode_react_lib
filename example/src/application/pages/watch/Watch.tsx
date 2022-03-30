@@ -12,6 +12,13 @@ export const Watch = observer(() => {
         {viewModel.progress && <h1>Loading..</h1>}
         {!viewModel.progress && <h1>{viewModel.displayTime}</h1>}
         <button onClick={() => viewModel.now()}>NOW</button>
+        <button
+          onClick={() => {
+            viewModel.goToCounterPage();
+          }}
+        >
+          Counter 페이지로 이동
+        </button>
       </VStack>
     </Center>
   );

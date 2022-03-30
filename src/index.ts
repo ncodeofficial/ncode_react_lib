@@ -16,6 +16,8 @@ import {
   NCStorage,
   NCStorageClassName,
 } from "./IO/persistant/NCStorage";
+import { NCNavigator } from "./utils/router/NCNavigator";
+import { NCNavigate } from "./utils/router/NCNavigate";
 import {
   NCApplicationConfiguration,
   NCDefaultApplicationConfiguration,
@@ -64,4 +66,6 @@ export {
   NCLog,
   NCOptional,
   NCJsonSerializer,
+  NCNavigator,
+  NCNavigate,
 };

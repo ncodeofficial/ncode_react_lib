@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { NCLog } from "@ncodedcode/ncode_react_lib";
+import { NCLog, NCNavigator } from "@ncodedcode/ncode_react_lib";
 
 export const CounterViewModelClassName = "CounterViewModel";
 export const CounterViewModelClassName2 = "CounterViewModel2";
@@ -8,6 +8,7 @@ export interface CounterViewModel {
   value: number;
   increase(): void;
   decrease(): void;
+  goToWatchPage(): void;
 }
 
 export class CounterViewModelImpl implements CounterViewModel {
@@ -29,5 +30,9 @@ export class CounterViewModelImpl implements CounterViewModel {
   decrease() {
     NCLog.d("decrease");
     this.count -= 1;
+  }
+
+  goToWatchPage(): void {
+    NCNavigator.moveTo("/watch");
   }
 }

@@ -41,7 +41,11 @@
   },
   "jest": {
     "modulePathIgnorePatterns": [
-      "dist", "example"
+      "dist",
+      "example"
     ]
+  },
+  "dependencies": {
+    "react-router-dom": "^6.2.1"
   }
 }

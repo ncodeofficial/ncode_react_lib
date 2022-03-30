@@ -38,6 +38,13 @@ export const Counter = observer(() => {
           >
             +
           </button>
+          <button
+            onClick={() => {
+              viewModel.goToWatchPage();
+            }}
+          >
+            Watch 페이지로 이동
+          </button>
         </HStack>
       </VStack>
     </Center>
