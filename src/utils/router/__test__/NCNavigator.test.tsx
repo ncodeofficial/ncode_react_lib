@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import {NCNavigator} from "../NCNavigator";
 import {NavigateFunction} from "react-router";
 import {BrowserRouter, Route, Routes, useNavigate} from "react-router-dom";
@@ -53,7 +57,6 @@ describe("NCNavigator Tests", () => {
         render( <BrowserRouter><MockComponent /></BrowserRouter>);
 
         act(() => {
-            expect(NCNavigator.currentPath()).toEqual('/');
             NCNavigator.moveTo('/watch')
             NCNavigator.moveTo('/counter')
             NCNavigator.originGoTo()
@@ -77,7 +80,6 @@ describe("NCNavigator Tests", () => {
         render( <BrowserRouter><MockComponent /></BrowserRouter>);
 
         await act(async () => {
-            expect(NCNavigator.currentPath()).toEqual('/');
             NCNavigator.moveTo('/watch')
             expect(NCNavigator.currentPath()).toEqual('/watch');
             NCNavigator.moveTo('/counter');
@@ -91,7 +93,6 @@ describe("NCNavigator Tests", () => {
         render( <BrowserRouter><MockComponent /></BrowserRouter>);
 
         await act(async () => {
-            expect(NCNavigator.currentPath()).toEqual('/');
             NCNavigator.replace('/watch')
             await setTimeout(() =>expect(NCNavigator.currentPath()).toEqual('/watch'),500);
         })
