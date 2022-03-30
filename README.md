@@ -127,6 +127,9 @@ export class AppConfiguration implements NCApplicationConfiguration {
 }
 ```
 
+- use NCNavigator  
+Please refer to the following [document]('./NAVIGATE.md').
+
 # TO-DO
 
 - [x] Test Environment  

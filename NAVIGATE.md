@@ -1,6 +1,6 @@
 # Navigate Instructions
 
-**Inedx**
+**Index**
 
 1. [Create an NavigateHOC](#use1)
 2. [Use the function where you want to use it.](#use2)
@@ -9,6 +9,14 @@
 3. [Now you can use the Navigate function anywhere you want.](#use3)
 
 ---
+
+
+❗️**Caution**
+> The time of creation of the document is   
+> - react: 17.0.2
+> - react-dom: 17.0.2
+> - react-router-dom: 6.2.1
+  
 
 ## 1. Create an NavigateHOC <a id="use1"></a>
 
